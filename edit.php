@@ -10,5 +10,6 @@ $d = mysqli_fetch_array($data);
     Nama: <input type="text" name="nama" value="<?= $d['nama']; ?>"><br>
     No Presensi: <input type="number" name="no_presensi" value="<?= $d['no_presensi']; ?>"><br>
     Kelas: <input type="text" name="kelas" value="<?= $d['kelas']; ?>"><br>
+    Foto: <input type="file" name="foto" value="<?= $d['foto']; ?>"><br>
     <button type="submit" name="update">Update</button>
 </form>
