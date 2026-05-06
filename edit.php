@@ -4,15 +4,35 @@ $id = $_GET['id'];
 $data = mysqli_query($conn, "SELECT * FROM siswa WHERE id='$id'");
 $d = mysqli_fetch_array($data);
 ?>
-
-<form action="proses.php" method="POST">
-    <input type="hidden" name="id" value="<?= $d['id']; ?>">
-    Nama: <input type="text" name="nama" value="<?= $d['nama']; ?>"><br>
-    No Presensi: <input type="number" name="no_presensi" value="<?= $d['no_presensi']; ?>"><br>
-    Kelas: <input type="text" name="kelas" value="<?= $d['kelas']; ?>"><br>
-   Foto Saat Ini: <br>
-    <img src="uploads/<?= $d['foto']; ?>" width="100"><br>
-    Ganti Foto: <input type="file" name="foto"><br>
-    <small>*Kosongkan jika tidak ingin mengubah foto</small><br><br>
-    <button type="submit" name="update">Update</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Data Siswa</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Data Siswa</h2>
+        <a href="index.php" class="btn btn-primary" style="margin-bottom: 20px;">Kembali</a>
+        
+        <form action="proses.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
+            
+            <div class="form-group">
+                <label>Nama Siswa</label>
+                <input type="text" name="nama" value="<?php echo $d['nama']; ?>" required>
+            </div>
+            <div class="form-group">
+                <label>No. Presensi</label>
+                <input type="number" name="no_presensi" value="<?php echo $d['no_presensi']; ?>" required>
+            </div>
+            <div class="form-group">
+                <label>Kelas</label>
+                <input type="text" name="kelas" value="<?php echo $d['kelas']; ?>" required>
+            </div>
+            
+            <button type="submit" name="update" class="btn btn-success">Update Data</button>
+        </form>
+    </div>
+</body>
+</html>
