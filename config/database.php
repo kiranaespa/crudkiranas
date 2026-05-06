@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "sekolah";
+$user = "admin123";
+$pass = "admin123";
+$db   = "absensi_siswa";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 
