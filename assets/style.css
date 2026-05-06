@@ -1,0 +1,83 @@
+/* Reset dikit biar konsisten */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  margin: 20px;
+}
+
+/* Judul */
+h1 {
+  color: #333;
+}
+
+/* Link tambah siswa */
+a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Header table */
+th {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Isi table */
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hover row */
+tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Gambar */
+td img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Tombol aksi */
+.aksi a {
+  margin: 0 5px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Edit button */
+.aksi a.edit {
+  background-color: #22c55e;
+  color: white;
+}
+
+/* Hapus button */
+.aksi a.hapus {
+  background-color: #ef4444;
+  color: white;
+}
+
+.aksi a:hover {
+  opacity: 0.8;
+}
